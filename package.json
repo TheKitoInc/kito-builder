@@ -1,0 +1,25 @@
+{
+  "name": "kito-builder",
+  "version": "1.0.0",
+  "description": "Lightweight, modular build tool designed to simplify modern frontend development workflows. Inspired by tools like Vite, it provides a streamlined development experience while staying easy to understand and extend.",
+  "license": "MIT",
+  "author": "TheKitoInc",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SSG",
+    "builder",
+    "light"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheKitoInc/kito-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheKitoInc/kito-builder/issues"
+  },
+  "homepage": "https://github.com/TheKitoInc/kito-builder#readme"
+}
