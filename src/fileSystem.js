@@ -33,6 +33,20 @@ const getPath = function (strPath) {
   return path.resolve(strPath);
 };
 
+const getRelativePath = function (basePath, fullPath) {
+  if (basePath === undefined || basePath === null) {
+    throw new Error("Base path is required");
+  }
+
+  if (fullPath === undefined || fullPath === null) {
+    throw new Error("Full path is required");
+  }
+
+  const relativePath = path.relative(basePath, fullPath);
+
+  return relativePath;
+};
+
 const mergePaths = function (basePath, relativePath) {
   if (basePath === undefined || basePath === null) {
     throw new Error("Base path is required");
@@ -43,4 +57,4 @@ const mergePaths = function (basePath, relativePath) {
   return path.join(basePath, relativePath);
 };
 
-export { exists, isDirectory, isFile, getPath, mergePaths };
+export { exists, isDirectory, isFile, getPath, mergePaths, getRelativePath };
