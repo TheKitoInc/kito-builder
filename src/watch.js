@@ -1,4 +1,5 @@
 import { watch } from "chokidar";
+import { getRelativePath } from "./fileSystem.js";
 
 const runWatch = function (src, callback) {
   // Watch for changes in the source directory
@@ -8,7 +9,7 @@ const runWatch = function (src, callback) {
       console.log(`File ${event}: ${path}`);
 
       // Process the file with the plugins
-      callback(path);
+      callback(getRelativePath(src, path));
     }
   });
 };
