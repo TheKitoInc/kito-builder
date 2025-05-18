@@ -1,9 +1,9 @@
 import { createServer } from "http";
-import { getPath, isDirectory, isFile,mergePaths } from "./fileSystem.js";
+import { getPath, isDirectory, isFile, mergePaths } from "./fileSystem.js";
 
 const handleRequest = function (rootPath, req, res) {
   console.log(rootPath);
-  let requestPath = mergePaths(rootPath,req.url);
+  let requestPath = mergePaths(rootPath, req.url);
 
   if (isDirectory(requestPath)) {
     requestPath = mergePaths(requestPath, "index.html");
@@ -48,7 +48,6 @@ const launchServer = function (root, port) {
   server.on("request", function (req, res) {
     console.log("Request received:", req.method, req.url);
   });
-  
 };
 
 export { launchServer };
